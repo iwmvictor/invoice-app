@@ -1,0 +1,664 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e2139;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007bff;
+  transition: 1s all ease-in-out;
+}
+
+::placeholder {
+  font-size: 13px;
+  opacity: 0.3;
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+}
+
+.form-container {
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 5px;
+  position: relative;
+  background: #141625;
+  box-shadow: 0 0 8px #1e2139;
+}
+
+.form-container h2 {
+  color: #f9fafe;
+  padding: 20px 0;
+  font-size: 32px;
+  text-transform: capitalize;
+}
+
+.form-container form {
+  padding: 20px;
+  background: #222;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  font-size: 18px;
+  padding: 5px 0;
+  color: #fff;
+  opacity: 0.3;
+  font-weight: 100;
+}
+
+form input,
+form textarea,
+form select {
+  font-size: 21px;
+  font-weight: 600;
+  width: 100%;
+  height: 40px;
+  padding: 5px 8px;
+  border: 0;
+  color: gray;
+  background: #1e2139;
+  outline: none;
+  border-radius: 2px;
+  font-family: "Quicksand", sans-serif;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  color: #fff;
+  filter: brightness(1.3);
+}
+
+textarea {
+  height: 40px;
+  resize: none;
+}
+
+/* landing page */
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #141625;
+  display: flex;
+  max-height: 100%;
+}
+
+.navbar {
+  align-items: center;
+  background: #1e2139;
+  border-radius: 0 20px 20px 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  left: 0;
+  max-width: 100px;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.logo {
+  margin-bottom: auto;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.navbar .user,
+.navbar .theme {
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.navbar .theme img {
+  width: 30px;
+  color: white;
+  opacity: 0.6;
+}
+.navbar .theme img:hover {
+  opacity: 1;
+}
+
+.navbar hr {
+  width: 100%;
+  opacity: 0.2;
+  border: 1px solid white;
+}
+
+.navbar .user img {
+  width: 60px;
+  border-radius: 50%;
+  transition: border 2s;
+}
+
+.navbar .user img:hover {
+  border: 1px solid white;
+}
+
+/* main content */
+
+.main {
+  flex-grow: 1;
+  padding: 60px;
+}
+
+.main-header {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.main-header .header-text {
+  margin-right: auto;
+}
+
+.main-header .header-text h1 {
+  text-transform: capitalize;
+  font-size: 36px;
+}
+
+.main-header .header-text p {
+  opacity: 0.6;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 60px;
+}
+
+.dropdown-button {
+  color: white;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.dropdown-content {
+  display: none;
+  text-align: left;
+  position: absolute;
+  background-color: #1e2139;
+  min-width: 130px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content label {
+  display: block;
+  padding: 10px 20px;
+}
+.dropdown-content label:hover {
+  background: #222;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.main-header .header-button button {
+  padding: 15px 25px;
+  border: 2px solid #007bff;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  transition: border 2s ease-in-out;
+  transition: box-shadow 0.5s;
+}
+
+.main-header .header-button button img {
+  background: white;
+  margin-right: 5px;
+  width: 20px;
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.main-header .header-button button:hover {
+  box-shadow: 0 0 5px #007bff;
+  border: 2px solid #141625;
+}
+
+.main-content {
+  padding: 20px 0;
+}
+
+.main-content .invoice-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e2139;
+  color: white;
+  font-size: 16px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  transition: border 2s;
+}
+
+.main-content .invoice-data:last-child {
+  margin-bottom: 0;
+}
+
+.main-content .invoice-data:hover {
+  border: 1px solid #007bff;
+}
+
+.invoice-data .due-date,
+.invoice-data .client-name {
+  opacity: 0.6;
+}
+
+.invoice-data .invoice-id label.exist-symbol,
+.invoice-data .due-date label.exist-symbol,
+.invoice-data .amount-due label.exist-symbol {
+  color: #007bff;
+  font-weight: 700;
+  filter: brightness(1.5);
+}
+
+.invoice-data div span.status-btn {
+  padding: 10px 20px;
+  text-transform: capitalize;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.invoice-data div span.status-btn img {
+  width: 8px;
+  margin-right: 5px;
+}
+
+.status-btn:has(#invoice-status:contains("pending")) {
+  background: #222;
+  color: yellow;
+}
+
+.status-btn:has(#invoice-status:contains("paid")) {
+  background: #222;
+  color: white;
+}
+
+/* media responsiveness */
+@media screen and (max-width: 760px) {
+  .navbar {
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0;
+    flex-direction: row;
+    max-width: 100%;
+    height: 100px;
+    top: 0;
+  }
+  .navbar .theme {
+    border-right: 1px solid rosybrown;
+    padding-right: 20px;
+  }
+  .navbar .theme,
+  .navbar .user {
+    margin: 0 10px;
+  }
+  .navbar .logo {
+    margin-right: auto;
+  }
+  .navbar .logo img {
+    width: 100px;
+  }
+  hr {
+    display: none;
+  }
+  .main {
+    margin-top: 60px;
+  }
+}
+
+/*detail.html*/
+.detail-container {
+  background: #141625;
+  margin: auto;
+  width: 820px;
+  border-radius: 5px;
+  position: relative;
+  align-items: center;
+  padding: 40px;
+}
+
+.detail-content .detail-header {
+  padding: 10px 0;
+}
+
+.detail-header a {
+  outline: 0;
+  border: 0;
+  color: white;
+  font-weight: 500;
+  background: transparent;
+  padding: 10px 5px 10px 0;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.detail-header a:hover {
+  color: #007bff;
+  font-weight: 800;
+}
+
+.detail-header a img {
+  margin-right: 10px;
+}
+
+.detail-content .detail-action-bar {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 10px;
+  align-items: center;
+  background: #1e2139;
+  margin: 10px 0;
+}
+
+.detail-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-status label {
+  margin-right: 10px;
+  color: white;
+  padding: 10px;
+}
+
+.detail-status p {
+  color: white;
+  display: flex;
+  align-items: center;
+  background: #1e2139;
+  padding: 8px 20px;
+  border-radius: 6px;
+  filter: brightness(0.8);
+  opacity: 0.8;
+}
+
+.detail-status p img {
+  width: 8px;
+  margin-right: 5px;
+}
+
+.detail-action-bar .detail-button button {
+  padding: 10px 20px;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  border-radius: 40px;
+  transition: box-shadow 1s;
+}
+
+.detail-action-bar .detail-button button.edit {
+  background: #f9fafe;
+  color: #7e88c3;
+}
+
+.detail-action-bar .detail-button button.delete {
+  margin: 0 5px;
+  background: #ec5757;
+  color: #fff;
+}
+
+.detail-action-bar .detail-button button.mark {
+  background: #7c5dfa;
+  color: #fff;
+}
+
+.detail-action-bar .detail-button button:hover {
+  box-shadow: 0 0 6px #007bff;
+}
+
+.detail-main {
+  background: #1e2139;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.detail-main .detail-main-header {
+  padding: 10px;
+  margin: auto;
+}
+
+.detail-main .column {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.column .project-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  font-weight: 500;
+}
+
+.column .project-detail .invoice-id {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 21px;
+}
+
+.column .project-detail .project-title {
+  font-weight: 300;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.column .billfrom-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.column div {
+  display: grid;
+}
+
+.column .detail-date div {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+}
+
+.column .billto-detail {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+}
+
+.column .detail-mail {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-content label {
+  opacity: 0.4;
+  padding: 5px 0;
+}
+
+.detail-item-list {
+  background: #252945;
+  border-radius: 8px;
+  margin: 0 10px;
+  box-shadow: 0 10px 20px (0, 0, 0, 0.25);
+}
+
+.item-list-detail {
+  padding: 10px 25px;
+}
+
+.item-list-detail .column label {
+  border-bottom: 1px solid;
+}
+
+.item-list-detail .item-added {
+  padding: 5px;
+}
+
+.item-list-detail .item-added span.item-added-name {
+  font-size: 23px;
+  text-shadow: 0 0 12px black;
+}
+
+.detail-item-list .total-amount-due {
+  background: #0c0e16;
+  padding: 5px 10px;
+  border-radius: 0 0 8px 8px;
+  margin-top: 10px;
+  box-shadow: 0 10px 20px (0, 0, 0, 0.25);
+}
+
+.total-amount-due .column {
+  width: 98%;
+  margin: auto;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.total-amount-due .column label {
+  opacity: 1;
+}
+
+.form p {
+  color: #1e2139;
+  text-shadow: 0 0 1px #222;
+}
+
+/*styling model*/
+.overlay {
+  width: 800px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #141625;
+}
+
+/* Modal Overlay Styles */
+.modal-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #141625;
+  border-radius: 5px;
+  box-shadow: 0 0 10px;
+  padding: 0 20px;
+  max-width: 80%;
+  width: 100%;
+  margin: auto;
+}
+
+.modal-content button.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: 900;
+  padding: 5px;
+  color: #141625;
+  transition: color 2s;
+}
+
+.modal-content .modal-header {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.modal-content .modal-body {
+  margin-bottom: 20px;
+}
+
+.modal-content button.modal-button {
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  color: #fff;
+}
+
+.ReactModal__Content {
+  position: fixed !important;
+  inset: 0px !important;
+  max-width: 700px;
+  margin: 0 auto;
+  border: 0 !important;
+  background: rgba(0, 0, 0, 0.61) !important;
+  overflow: auto !important;
+  outline: none !important;
+  padding: 20px !important;
+  z-index: 1000;
+}
+
+.ReactModal__Content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ReactModal__Content::-webkit-scrollbar-track {
+  background: #f9fafe;
+}
+
+.ReactModal__Content::-webkit-scrollbar-thumb {
+  background: #1e2139;
+}
